@@ -10,7 +10,8 @@ var tabGroup = Titanium.UI.createTabGroup();
 //
 var win1 = Titanium.UI.createWindow({  
     title:'WHL Teams',
-    backgroundColor:'#fff'
+    backgroundColor:'#fff',
+    url:'teams_view.js'
 });
 var tab1 = Titanium.UI.createTab({  
     icon:'KS_nav_ui.png',
