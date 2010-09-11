@@ -30,6 +30,12 @@ win.addEventListener('focus', function() {
     for (var c=0;c<data.length;c++) {
       // The data we care about: node title (team name), and node id
       table_data[c] = {title:data[c].node_title, nid:data[c].nid, hasChild:true};
+      
+      // And setting headers for what each division
+      if(data[c].term_data_name != current_division) {
+        table_data[c].header = data[c].term_data_name;
+        current_division = data[c].term_data_name;
+      }
     }
 
     // create table view
