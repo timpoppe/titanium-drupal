@@ -40,8 +40,17 @@ xhr.onload = function() {
 		left:100,
 		height:16
 	});
+	
+	var imageView = Titanium.UI.createImageView({
+  	image:SITE_PATH + '/sites/services/files/imagecache/80px_icon/' + data.field_logo[0].filename,
+  	top:10,
+  	left:10,
+  	width:80,
+  	height:80
+  });
 
   win.add(teamName);
   win.add(arena);
+  win.add(imageView);
 
 }
