@@ -8,7 +8,8 @@ The companion Drupal site, available from [http://github.com/jdschroeder/appify-
 
 ## Configuration
 
-Set the variable SITE_PATH in config.js to the root of your Drupal installation.
+* Add a new Titanium project and replace the contents of the Resources folder with this repository
+* Set the variable SITE_PATH in config.js to the root of your Drupal installation.
 
 ## Walk through the progress
 
