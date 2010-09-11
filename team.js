@@ -48,9 +48,27 @@ xhr.onload = function() {
   	width:80,
   	height:80
   });
+  
+  var mapView = Titanium.Map.createView({
+    mapType: Titanium.Map.STANDARD_TYPE,
+    region: {latitude:data.field_latitude[0].value, longitude:data.field_longitude[0].value, latitudeDelta:0.022, longitudeDelta:0.022},
+    animate:true,
+    regionFit:true,
+    userLocation:true,
+    top:100
+  });
+  
+  mapView.addAnnotation(Ti.Map.createAnnotation({
+    latitude:data.field_latitude[0].value,
+    longitude:data.field_longitude[0].value,
+    title:data.title,
+    subtitle: data.field_arena[0].value,
+    animate:false
+  }));
 
   win.add(teamName);
   win.add(arena);
   win.add(imageView);
-
+  win.add(mapView);
+  
 }
