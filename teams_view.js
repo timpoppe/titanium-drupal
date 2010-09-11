@@ -42,6 +42,17 @@ win.addEventListener('focus', function() {
     var tableview = Titanium.UI.createTableView({
       data:table_data
     });
+    
+    // Add an event listener for taps on the row items
+    tableview.addEventListener('click',function(e) { 
+      var teamWindow = Titanium.UI.createWindow({
+        url:'team.js',
+        backgroundColor:'#fff',
+        title:e.rowData.title,
+        nid:e.rowData.nid
+      });
+      Titanium.UI.currentTab.open(teamWindow,{animated:true});
+    });
 
     // add table view to the window
     win.add(tableview);
