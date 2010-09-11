@@ -39,7 +39,8 @@ xhr.onload = function() {
       longitude:data[c].node_data_field_logo_field_longitude_value,
       title:data[c].node_title,
       subtitle: data[c].node_data_field_logo_field_arena_value,
-    	animate:false
+    	animate:false,
+    	image:'whl_logo.png'
     }));
     
   }
