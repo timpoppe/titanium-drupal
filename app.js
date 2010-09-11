@@ -25,7 +25,8 @@ var tab1 = Titanium.UI.createTab({
 //
 var win2 = Titanium.UI.createWindow({  
     title:'League Map',
-    backgroundColor:'#fff'
+    backgroundColor:'#fff',
+    url:'league_map.js'
 });
 var tab2 = Titanium.UI.createTab({  
     icon:'103-map.png',
